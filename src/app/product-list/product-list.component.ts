@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  listOfString:string[]=['Mark','Steve','Merry'];
   /* name="John Smith" */
-  addToCart:number=0;
+  /* addToCart:number=0;
  product={
   name:'iPhone x',
 price:789,
@@ -27,7 +28,7 @@ discount:8.5,inStock:5,pImage:"/assets/images/14.jpg"
     this.addToCart++;
   }
  
- }
+ } */
  /* onNameChange(event:any){
   this.name=event.target.value;
   console.log(event.target.value);
