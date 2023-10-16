@@ -1,7 +1,8 @@
 .ekart--product--container{
-    padding :10px 30px;
+    padding :20px auto;
+    margin :0px 20vh;
 }
-button{
+/* button{
     padding :5px 10px;
     margin :0px 5px;
-}
+} */
