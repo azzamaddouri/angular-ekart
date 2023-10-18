@@ -15,4 +15,8 @@ export class AppComponent {
     this.inputElements.forEach((el)=>{name+=el.nativeElement.value+' '});
     this.fullName=name.trim();
   } 
+  toggle : Boolean=true;
+  onToggle(){
+    this.toggle=!this.toggle;
+  }
 }
