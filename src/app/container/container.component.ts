@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -33,4 +34,10 @@ discount:8.5,inStock:5,pImage:"/assets/images/14.jpg"
   this.name=event.target.value;
   console.log(event.target.value);
  } */
+ searchText:string="";
+ setSearchText(value :string){
+this.searchText=value;
+ }
+ @ViewChild(ProductListComponent/* 'productListComponent' */)
+ prodcutListComponent:ProductListComponent;
 }

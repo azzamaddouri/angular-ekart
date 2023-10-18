@@ -8,11 +8,12 @@
 <!-- <button (click)="decrementCartValue()" >-</button>
 <span>{{addToCart}}</span>
 <button (click)="incrementCartValue()" >+</button> --> 
-<app-search></app-search>
+<app-search (searchTextChange)="setSearchText($event)"></app-search>  ><!-- (onSearchTextChanged)="setSearchText($event)" -->
 <!-- <div *ngFor="let item of listOfString">
     <p>Current element of array is:{{item}}</p>
 </div> -->
-<product-list></product-list>
+<product-list [searchText]="searchText" #productListComponent></product-list>
+<product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
 </div>
 <!-- There are some Html that don't accept string interpolations like Disable,Hidden -->
 <!-- <input bind-value="name" (input)="onNameChange($event)"[attr.aria-hidden]=""><br><p>Name = {{name}}</p></div> -->

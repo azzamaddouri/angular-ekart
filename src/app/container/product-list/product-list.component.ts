@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/Models/Product';
 
 @Component({
   selector: 'product-list',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  selectedProduct : Product;
   products = [
     {
       id: 1,
@@ -539,4 +541,8 @@ export class ProductListComponent {
   onFilterChanged(value:string){
 this.selectedFilterRadioButton=value;
   }
+  // Input() => Parent to child
+  @Input()
+  searchText:string="";
+
 }
